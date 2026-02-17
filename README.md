@@ -1,6 +1,6 @@
-# Azure Container Registry Login
+# Azure Container Registry OIDC Login
 
-This action is meant to simplify the process of logging into an Azure Container Registry (ACR) and ensure that best setup is used.
+This action is meant to simplify the process of logging into an Azure Container Registry (ACR) via OIDC and ensure that best setup is used.
 
 ## Input parameters
 
@@ -47,7 +47,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Registry login
-        uses: MicahWW/gh-a-azure-container-registry-login@v1
+        uses: MicahWW/azure-container-registry-oidc-login@v1
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
