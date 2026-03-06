@@ -54,7 +54,7 @@ runs:
     # The username is set to a fixed value (00000000-0000-0000-0000-000000000000) as required by ACR when using token-based authentication.
     # https://learn.microsoft.com/en-us/azure/container-registry/container-registry-authentication?tabs=azure-cli#use-az-acr-login-without-docker-daemon
     - name: Log in to ACR
-      uses: docker/login-action@v3.7.0
+      uses: docker/login-action@v4.0.0
       with:
         registry: ${{ inputs.registry-url }}
         username: 00000000-0000-0000-0000-000000000000
